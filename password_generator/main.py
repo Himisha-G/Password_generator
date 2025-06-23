@@ -21,8 +21,15 @@ for num in range (nr):
     v = random.randint(0, len(letters))
     ans.append(letters[v])
 z=nr_letters
+second_ans=ans.copy()
+print("Option 1:")
 for value in range(nr_letters):
     y=random.randint(0,z-1)
     print(ans[y],end="")
     ans.remove(ans[y])
     z-=1
+print("\nOption 2:")
+# instead of random.randint we can use random.shuffle(ans)
+random.shuffle(second_ans)
+for value in second_ans:
+ print(value,end="") 
